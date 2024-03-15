@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInViewController" customModule="PracticoApp" customModuleProvider="target">
+            <connections>
+                <outlet property="logInButton" destination="cLe-X7-pxA" id="a87-iZ-yL4"/>
+                <outlet property="passwordTextField" destination="swD-b9-7JL" id="wih-Yx-Zhg"/>
+                <outlet property="userTextField" destination="pMq-ng-QRs" id="oWm-Ms-3w7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRW-DE-EPC">
+                    <rect key="frame" x="115" y="89" width="163" height="37.333333333333343"/>
+                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="31"/>
+                    <color key="textColor" red="0.99215686270000003" green="0.4431372549" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLe-X7-pxA">
+                    <rect key="frame" x="135" y="753.66666666666663" width="123" height="34.333333333333371"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Iniciar sesión">
+                        <color key="baseBackgroundColor" red="0.99215686270000003" green="0.4431372549" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="logInButtonPressed:" destination="-1" eventType="touchUpInside" id="kW2-CZ-zNa"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="w4h-ex-Vyo">
+                    <rect key="frame" x="30" y="388" width="333" height="76"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduce el usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pMq-ng-QRs">
+                            <rect key="frame" x="0.0" y="0.0" width="333" height="34"/>
+                            <color key="backgroundColor" red="1" green="0.95686274509803915" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="userTextEditingChanged:" destination="-1" eventType="editingChanged" id="Wmv-nq-LjB"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduce la contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="swD-b9-7JL">
+                            <rect key="frame" x="0.0" y="42" width="333" height="34"/>
+                            <color key="backgroundColor" red="1" green="0.95686274510000002" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            <connections>
+                                <action selector="passwordEditingChanged:" destination="-1" eventType="editingChanged" id="nKm-gG-k09"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="1" green="0.90196078431372551" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="w4h-ex-Vyo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="71k-uA-JXr"/>
+                <constraint firstItem="w4h-ex-Vyo" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="7DW-fd-7Dj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JRW-DE-EPC" secondAttribute="trailing" constant="115" id="8Uh-iB-2Vs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w4h-ex-Vyo" secondAttribute="trailing" constant="30" id="VDR-fE-os4"/>
+                <constraint firstItem="JRW-DE-EPC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="ZQl-rh-3Yv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cLe-X7-pxA" secondAttribute="trailing" constant="135" id="dF6-BV-vHz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cLe-X7-pxA" secondAttribute="bottom" constant="30" id="f1D-JP-ZFe"/>
+                <constraint firstItem="cLe-X7-pxA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="135" id="iVB-6s-Zff"/>
+                <constraint firstItem="w4h-ex-Vyo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vFI-Ua-gsn"/>
+                <constraint firstItem="JRW-DE-EPC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="115" id="ynn-7g-6rB"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+</document>
